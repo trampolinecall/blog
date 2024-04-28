@@ -46,13 +46,14 @@ body {
     padding: 0;
     top: 0;
     position: sticky;
+    z-index: 3;
 }
 #topbarthings {
     display: flex;
     flex-flow: row nowrap;
     align-items: baseline;
-    padding: $spacing-medium;
-    padding-top: calc(#{$spacing-medium} - 0.3em);
+    padding: $spacing-large;
+    padding-top: calc(#{$spacing-large} - 0.3em);
 }
 
 #homelinkitem {
@@ -65,26 +66,26 @@ body {
 
 .content .title {
     @include content-title;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-small;
+    margin-top: $spacing-xlarge;
+    margin-bottom: $spacing-xlarge;
     color: $color-on-surface;
 }
 .content h1 {
     @include content-h1;
-    margin-top: $spacing-large;
-    margin-bottom: $spacing-small;
+    margin-top: $spacing-xlarge;
+    margin-bottom: $spacing-large;
     color: $color-on-surface;
 }
 .content h2 {
     @include content-h2;
     margin-top: $spacing-large;
-    margin-bottom: $spacing-small;
+    margin-bottom: $spacing-medium;
     color: $color-on-surface;
 }
 .content h3 {
     @include content-h3;
     margin-top: $spacing-medium;
-    margin-bottom: $spacing-small;
+    margin-bottom: $spacing-medium;
     color: $color-on-surface;
 }
 .content h4 {
