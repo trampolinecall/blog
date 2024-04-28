@@ -17,6 +17,7 @@ html {
     background: $color-surface-0;
     color: $color-on-surface;
     @include content-body;
+    min-height: 100%;
 }
 
 body {
