@@ -1,0 +1,4 @@
+$spacing-scale: (4/3);
+$spacing-small: 10px;
+$spacing-medium: calc(#{$spacing-small} * pow(#{$spacing-scale}, 1));
+$spacing-large: calc(#{$spacing-small} * pow(#{$spacing-scale}, 2));

@@ -1,0 +1,118 @@
+---
+---
+
+@import "type.scss";
+@import "spacing.scss";
+@import "colors.scss";
+
+.navlink {
+    @include ui-medium;
+    text-decoration: none;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-medium;
+    color: $color-on-surface;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: $color-surface-0;
+    color: $color-on-surface;
+}
+
+.content {
+    padding: 0 $spacing-large;
+}
+
+.notfullwidth {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .notfullwidth {
+      max-width: none;
+  }
+}
+
+#topbarbox {
+    background: $color-surface-2;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: sticky;
+}
+#topbarthings {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    padding: $spacing-medium;
+    padding-top: calc(#{$spacing-medium} - 0.3em);
+}
+
+#homelinkitem {
+    flex-grow: 2;
+}
+
+#homelink {
+    @include ui-big;
+}
+
+.content .title {
+    @include content-title;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content h1 {
+    @include content-h1;
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content h2 {
+    @include content-h2;
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content h3 {
+    @include content-h3;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content h4 {
+    @include content-h4;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content h5 {
+    @include content-h5;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content h6 {
+    @include content-h6;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+.content p {
+    @include content-body;
+    margin-top: $spacing-small;
+    margin-bottom: $spacing-small;
+    color: $color-on-surface;
+}
+
+.content a {
+    @include content-body;
+    text-decoration: underline;
+    color: $color-primary;
+}
+
+.content code {
+    @include content-code;
+}

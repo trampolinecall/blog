@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        {% assign pt = page.title | strip %}
+        {% if pt != "" %}
+            <title>{{ page.title }} - {{ site.title }}</title>
+        {% else %}
+            <title>{{ site.title }}</title>
+        {% endif %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+        <div id="topbarbox">
+            <div id="topbarthings" class="notfullwidth">
+                <div id="homelinkitem">
+                <a href="/" id="homelink" class="navlink">{{ site.title }}</a>
+                </div>
+                <nav>
+                    <a href="/about" class="navlink">About</a>
+                </nav>
+            </div>
+        </div>
+        <section class="content notfullwidth">
+            {{ content }}
+        </section>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+$type-scale: (9/8);
+$base-size: 12pt;
+
+$normal-font-family: "Lato", sans-serif;
+$monospace-font-family: "Roboto Mono", monospace;
+
+@mixin ui-big {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 4));
+        style: normal;
+        weight: normal;
+    }
+}
+@mixin ui-medium {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 2));
+        style: normal;
+        weight: normal;
+    }
+}
+@mixin ui-normal {
+    font: {
+        family: $normal-font-family;
+        size: #{$base-size};
+        style: normal;
+        weight: normal;
+    }
+}
+@mixin ui-tiny {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, -1));
+        style: normal;
+        weight: normal;
+    }
+}
+
+@mixin content-title {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 6));
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-h1 {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 5));
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-h2 {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 4));
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-h3 {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 3));
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-h4 {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 2));
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-h5 {
+    font: {
+        family: $normal-font-family;
+        size: calc(#{$base-size} * pow(#{$type-scale}, 1));
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-h6 {
+    font: {
+        family: $normal-font-family;
+        size: $base-size;
+        style: normal;
+        weight: bold;
+    }
+}
+@mixin content-body {
+    font: {
+        family: $normal-font-family;
+        size: $base-size;
+        style: normal;
+        weight: normal;
+    }
+}
+@mixin content-code {
+    font: {
+        family: $monospace-font-family;
+        size: $base-size * 0.75;
+        style: normal;
+        weight: normal;
+    }
+}
