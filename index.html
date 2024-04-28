@@ -27,8 +27,10 @@ layout: default
     {%- endif -%}
 
     <div class="post-list-item">
-        <span class="post-date">{{ post.date | date: "%b %d" }}</span>
-        <span><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+        <p>
+            <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+            <span><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+        </p>
     </div>
 
     {%- endfor -%}
