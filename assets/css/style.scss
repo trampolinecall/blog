@@ -122,3 +122,13 @@ body {
 .content code {
     @include content-code;
 }
+
+.content pre {
+    background: $color-surface-1;
+    padding: $spacing-large;
+    border-radius: 10px;
+}
+
+figure {
+    margin: 0;
+}
