@@ -17,6 +17,7 @@ body {
     padding: 0;
     margin: 0;
     background: $color-surface-0;
+    background-size: cover;
     color: $color-on-surface;
     @include content-body;
 }
