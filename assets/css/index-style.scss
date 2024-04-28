@@ -6,25 +6,23 @@
 @import "colors.scss";
 
 .post-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: left;
-    gap: 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(auto-fill, max-content);
+    gap: 10px;
+    align-item: start;
 }
 
 .post-list-item {
     background: $color-surface-1;
     padding: $spacing-xlarge;
     border-radius: $spacing-xlarge;
-    width: calc(33% - 10px);
     box-sizing: border-box;
 }
 .post-date {
-    // display: inline-block;
-    // width: 60pt;
 }
 .post-excerpt {
-    max-height: 150px;
+    max-height: 200px;
     overflow: hidden;
     position: relative;
     z-index: 0;
