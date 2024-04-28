@@ -5,7 +5,8 @@ $color-light-on-primary-container: #08581B;
 
 $color-light-surface-0: #FAFFFA;
 $color-light-surface-1: #ECFEEC;
-$color-light-surface-2: #E1FAE1;
+$color-light-surface-2: #DFFBDC;
+$color-light-surface-3: #D0F9CC;
 
 $color-light-on-surface: #000000;
 $color-light-on-surface-less: #444444;
@@ -15,12 +16,13 @@ $color-light-outline-less: #999999;
 
 $color-dark-primary: #A9DFB4;
 $color-dark-on-primary: #002908;
-$color-dark-primary-container: #2C5E35;
-$color-dark-on-primary-container: #DFF9DC;
+$color-dark-primary-container: #1F582A;
+$color-dark-on-primary-container: #E5FCE2;
 
 $color-dark-surface-0: #000502;
 $color-dark-surface-1: #001A08;
-$color-dark-surface-2: #0F2E1A;
+$color-dark-surface-2: #00290D;
+$color-dark-surface-3: #003910;
 
 $color-dark-on-surface: #ffffff;
 $color-dark-on-surface-less: #bbbbbb;
@@ -31,6 +33,7 @@ $color-dark-outline-less: #999999;
 $aaa-normal-text-ratio: 7;
 $aaa-large-text-ratio: 4.5;
 $ui-ratio: 3;
+$surface-ratio: 1.03;
 
 @function srgb_to_linear($val) {
     @if $val < 0.3928 {
@@ -71,6 +74,16 @@ $ui-ratio: 3;
 @debug ensure_contrast_ratio($color-light-primary, $color-light-surface-0, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-light-primary, $color-light-surface-1, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-light-primary, $color-light-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($color-light-primary, $color-light-surface-3, $aaa-normal-text-ratio);
+
+@debug ensure_contrast_ratio($color-light-surface-0, $color-light-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($color-light-surface-1, $color-light-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($color-light-surface-2, $color-light-surface-3, $surface-ratio);
+
+@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-0, $surface-ratio);
+@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-3, $surface-ratio);
 
 @debug ensure_contrast_ratio($color-light-on-primary, $color-light-primary, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-light-on-primary-container, $color-light-primary-container, $aaa-normal-text-ratio);
@@ -80,14 +93,27 @@ $ui-ratio: 3;
 @debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-1, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-light-on-surface, $color-light-surface-2, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($color-light-on-surface, $color-light-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-3, $aaa-normal-text-ratio);
 
 @debug ensure_contrast_ratio($color-light-outline, $color-light-surface-0, $ui-ratio);
 @debug ensure_contrast_ratio($color-light-outline, $color-light-surface-1, $ui-ratio);
 @debug ensure_contrast_ratio($color-light-outline, $color-light-surface-2, $ui-ratio);
+@debug ensure_contrast_ratio($color-light-outline, $color-light-surface-3, $ui-ratio);
 
 @debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-0, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-1, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-3, $aaa-normal-text-ratio);
+
+@debug ensure_contrast_ratio($color-dark-surface-0, $color-dark-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($color-dark-surface-1, $color-dark-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($color-dark-surface-2, $color-dark-surface-3, $surface-ratio);
+
+@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-0, $surface-ratio);
+@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-3, $surface-ratio);
 
 @debug ensure_contrast_ratio($color-dark-on-primary, $color-dark-primary, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-dark-on-primary-container, $color-dark-primary-container, $aaa-normal-text-ratio);
@@ -97,10 +123,13 @@ $ui-ratio: 3;
 @debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-1, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-dark-on-surface, $color-dark-surface-2, $aaa-normal-text-ratio);
 @debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($color-dark-on-surface, $color-dark-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-3, $aaa-normal-text-ratio);
 
 @debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-0, $ui-ratio);
 @debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-1, $ui-ratio);
 @debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-2, $ui-ratio);
+@debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-3, $ui-ratio);
 
 :root {
     --color-primary: #{$color-light-primary};
@@ -110,6 +139,7 @@ $ui-ratio: 3;
     --color-surface-0: #{$color-light-surface-0};
     --color-surface-1: #{$color-light-surface-1};
     --color-surface-2: #{$color-light-surface-2};
+    --color-surface-3: #{$color-light-surface-3};
     --color-on-surface: #{$color-light-on-surface};
     --color-on-surface-less: #{$color-light-on-surface-less};
     --color-outline: #{$color-light-outline};
@@ -124,6 +154,7 @@ $ui-ratio: 3;
         --color-surface-0: #{$color-dark-surface-0};
         --color-surface-1: #{$color-dark-surface-1};
         --color-surface-2: #{$color-dark-surface-2};
+        --color-surface-3: #{$color-dark-surface-3};
         --color-on-surface: #{$color-dark-on-surface};
         --color-on-surface-less: #{$color-dark-on-surface-less};
         --color-outline: #{$color-dark-outline};
@@ -138,6 +169,7 @@ $color-on-primary-container: var(--color-on-primary-container);
 $color-surface-0: var(--color-surface-0);
 $color-surface-1: var(--color-surface-1);
 $color-surface-2: var(--color-surface-2);
+$color-surface-3: var(--color-surface-3);
 $color-on-surface: var(--color-on-surface);
 $color-on-surface-less: var(--color-on-surface-less);
 $color-outline: var(--color-outline);
