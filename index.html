@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="/assets/css/index-style.css">
+<link rel="stylesheet" href="{{ "/assets/css/index-style.css" | relative_url }}">
 
 {%- if site.posts.size > 0 -%}
 <h1 class="title">Posts</h1>
