@@ -14,7 +14,7 @@
 }
 
 .post-list-item {
-    background: colors.$color-surface-1;
+    background: colors.$surface-1;
     padding: spacing.$spacing-xlarge;
     border-radius: spacing.$spacing-xlarge;
     box-sizing: border-box;
@@ -33,7 +33,7 @@
     bottom: 0;
     width: 100%;
     height: 50px;
-    background: linear-gradient(#0000, colors.$color-surface-1);
+    background: linear-gradient(#0000, colors.$surface-1);
 }
 body .post-link {
     @include type.ui-medium;

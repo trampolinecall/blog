@@ -10,12 +10,12 @@
     text-decoration: none;
     margin-top: spacing.$spacing-medium;
     margin-bottom: spacing.$spacing-medium;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 
 html {
-    background: colors.$color-surface-0;
-    color: colors.$color-on-surface;
+    background: colors.$surface-0;
+    color: colors.$on-surface;
     @include type.content-body;
     min-height: 100%;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 #topbarbox {
-    background: colors.$color-surface-3;
+    background: colors.$surface-3;
     margin: 0;
     padding: 0;
     top: 0;
@@ -68,55 +68,55 @@ body {
     @include type.content-title;
     margin-top: spacing.$spacing-xlarge;
     margin-bottom: spacing.$spacing-xlarge;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent h1 {
     @include type.content-h1;
     margin-top: spacing.$spacing-xlarge;
     margin-bottom: spacing.$spacing-large;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent h2 {
     @include type.content-h2;
     margin-top: spacing.$spacing-large;
     margin-bottom: spacing.$spacing-medium;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent h3 {
     @include type.content-h3;
     margin-top: spacing.$spacing-medium;
     margin-bottom: spacing.$spacing-medium;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent h4 {
     @include type.content-h4;
     margin-top: spacing.$spacing-medium;
     margin-bottom: spacing.$spacing-small;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent h5 {
     @include type.content-h5;
     margin-top: spacing.$spacing-medium;
     margin-bottom: spacing.$spacing-small;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent h6 {
     @include type.content-h6;
     margin-top: spacing.$spacing-medium;
     margin-bottom: spacing.$spacing-small;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 .postcontent p {
     @include type.content-body;
     margin-top: spacing.$spacing-small;
     margin-bottom: spacing.$spacing-small;
-    color: colors.$color-on-surface;
+    color: colors.$on-surface;
 }
 
 .postcontent a {
     @include type.content-body;
     text-decoration: underline;
-    color: colors.$color-primary;
+    color: colors.$primary;
 }
 
 .postcontent code {
@@ -124,7 +124,7 @@ body {
 }
 
 .postcontent pre {
-    background: colors.$color-surface-1;
+    background: colors.$surface-1;
     padding: spacing.$spacing-large;
     border-radius: 10px;
 }

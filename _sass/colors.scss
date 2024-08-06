@@ -1,36 +1,36 @@
 @use 'sass:math';
 
-$color-light-primary: #035825;
-$color-light-on-primary: #CCEFD4;
-$color-light-primary-container: #86E39C;
-$color-light-on-primary-container: #08581B;
+$light-primary: #035825;
+$light-on-primary: #CCEFD4;
+$light-primary-container: #86E39C;
+$light-on-primary-container: #08581B;
 
-$color-light-surface-0: #FAFFFA;
-$color-light-surface-1: #ECFEEC;
-$color-light-surface-2: #DFFBDC;
-$color-light-surface-3: #D0F9CC;
+$light-surface-0: #FAFFFA;
+$light-surface-1: #ECFEEC;
+$light-surface-2: #DFFBDC;
+$light-surface-3: #D0F9CC;
 
-$color-light-on-surface: #000000;
-$color-light-on-surface-less: #444444;
+$light-on-surface: #000000;
+$light-on-surface-less: #444444;
 
-$color-light-outline: #666666;
-$color-light-outline-less: #999999;
+$light-outline: #666666;
+$light-outline-less: #999999;
 
-$color-dark-primary: #A9DFB4;
-$color-dark-on-primary: #002908;
-$color-dark-primary-container: #1F582A;
-$color-dark-on-primary-container: #E5FCE2;
+$dark-primary: #A9DFB4;
+$dark-on-primary: #002908;
+$dark-primary-container: #1F582A;
+$dark-on-primary-container: #E5FCE2;
 
-$color-dark-surface-0: #000502;
-$color-dark-surface-1: #001405;
-$color-dark-surface-2: #011F0A;
-$color-dark-surface-3: #00290E;
+$dark-surface-0: #000502;
+$dark-surface-1: #001405;
+$dark-surface-2: #011F0A;
+$dark-surface-3: #00290E;
 
-$color-dark-on-surface: #ffffff;
-$color-dark-on-surface-less: #bbbbbb;
+$dark-on-surface: #ffffff;
+$dark-on-surface-less: #bbbbbb;
 
-$color-dark-outline: #aaaaaa;
-$color-dark-outline-less: #999999;
+$dark-outline: #aaaaaa;
+$dark-outline-less: #999999;
 
 $aaa-normal-text-ratio: 7;
 $aaa-large-text-ratio: 4.5;
@@ -70,106 +70,106 @@ $surface-ratio: 1.03;
     @return true;
 }
 
-@debug ensure_contrast_ratio($color-light-primary, $color-light-surface-0, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-primary, $color-light-surface-1, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-primary, $color-light-surface-2, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-primary, $color-light-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-primary, $light-surface-0, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-primary, $light-surface-1, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-primary, $light-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-primary, $light-surface-3, $aaa-normal-text-ratio);
 
-@debug ensure_contrast_ratio($color-light-surface-0, $color-light-surface-1, $surface-ratio);
-@debug ensure_contrast_ratio($color-light-surface-1, $color-light-surface-2, $surface-ratio);
-@debug ensure_contrast_ratio($color-light-surface-2, $color-light-surface-3, $surface-ratio);
+@debug ensure_contrast_ratio($light-surface-0, $light-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($light-surface-1, $light-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($light-surface-2, $light-surface-3, $surface-ratio);
 
-@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-0, $surface-ratio);
-@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-1, $surface-ratio);
-@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-2, $surface-ratio);
-@debug ensure_contrast_ratio($color-light-primary-container, $color-light-surface-3, $surface-ratio);
+@debug ensure_contrast_ratio($light-primary-container, $light-surface-0, $surface-ratio);
+@debug ensure_contrast_ratio($light-primary-container, $light-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($light-primary-container, $light-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($light-primary-container, $light-surface-3, $surface-ratio);
 
-@debug ensure_contrast_ratio($color-light-on-primary, $color-light-primary, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-primary-container, $color-light-primary-container, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface, $color-light-surface-0, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-0, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface, $color-light-surface-1, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-1, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface, $color-light-surface-2, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-2, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface, $color-light-surface-3, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-light-on-surface-less, $color-light-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-primary, $light-primary, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-primary-container, $light-primary-container, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface, $light-surface-0, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface-less, $light-surface-0, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface, $light-surface-1, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface-less, $light-surface-1, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface, $light-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface-less, $light-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface, $light-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($light-on-surface-less, $light-surface-3, $aaa-normal-text-ratio);
 
-@debug ensure_contrast_ratio($color-light-outline, $color-light-surface-0, $ui-ratio);
-@debug ensure_contrast_ratio($color-light-outline, $color-light-surface-1, $ui-ratio);
-@debug ensure_contrast_ratio($color-light-outline, $color-light-surface-2, $ui-ratio);
-@debug ensure_contrast_ratio($color-light-outline, $color-light-surface-3, $ui-ratio);
+@debug ensure_contrast_ratio($light-outline, $light-surface-0, $ui-ratio);
+@debug ensure_contrast_ratio($light-outline, $light-surface-1, $ui-ratio);
+@debug ensure_contrast_ratio($light-outline, $light-surface-2, $ui-ratio);
+@debug ensure_contrast_ratio($light-outline, $light-surface-3, $ui-ratio);
 
-@debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-0, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-1, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-2, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-primary, $color-dark-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-primary, $dark-surface-0, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-primary, $dark-surface-1, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-primary, $dark-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-primary, $dark-surface-3, $aaa-normal-text-ratio);
 
-@debug ensure_contrast_ratio($color-dark-surface-0, $color-dark-surface-1, $surface-ratio);
-@debug ensure_contrast_ratio($color-dark-surface-1, $color-dark-surface-2, $surface-ratio);
-@debug ensure_contrast_ratio($color-dark-surface-2, $color-dark-surface-3, $surface-ratio);
+@debug ensure_contrast_ratio($dark-surface-0, $dark-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($dark-surface-1, $dark-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($dark-surface-2, $dark-surface-3, $surface-ratio);
 
-@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-0, $surface-ratio);
-@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-1, $surface-ratio);
-@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-2, $surface-ratio);
-@debug ensure_contrast_ratio($color-dark-primary-container, $color-dark-surface-3, $surface-ratio);
+@debug ensure_contrast_ratio($dark-primary-container, $dark-surface-0, $surface-ratio);
+@debug ensure_contrast_ratio($dark-primary-container, $dark-surface-1, $surface-ratio);
+@debug ensure_contrast_ratio($dark-primary-container, $dark-surface-2, $surface-ratio);
+@debug ensure_contrast_ratio($dark-primary-container, $dark-surface-3, $surface-ratio);
 
-@debug ensure_contrast_ratio($color-dark-on-primary, $color-dark-primary, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-primary-container, $color-dark-primary-container, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface, $color-dark-surface-0, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-0, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface, $color-dark-surface-1, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-1, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface, $color-dark-surface-2, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-2, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface, $color-dark-surface-3, $aaa-normal-text-ratio);
-@debug ensure_contrast_ratio($color-dark-on-surface-less, $color-dark-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-primary, $dark-primary, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-primary-container, $dark-primary-container, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface, $dark-surface-0, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface-less, $dark-surface-0, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface, $dark-surface-1, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface-less, $dark-surface-1, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface, $dark-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface-less, $dark-surface-2, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface, $dark-surface-3, $aaa-normal-text-ratio);
+@debug ensure_contrast_ratio($dark-on-surface-less, $dark-surface-3, $aaa-normal-text-ratio);
 
-@debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-0, $ui-ratio);
-@debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-1, $ui-ratio);
-@debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-2, $ui-ratio);
-@debug ensure_contrast_ratio($color-dark-outline, $color-dark-surface-3, $ui-ratio);
+@debug ensure_contrast_ratio($dark-outline, $dark-surface-0, $ui-ratio);
+@debug ensure_contrast_ratio($dark-outline, $dark-surface-1, $ui-ratio);
+@debug ensure_contrast_ratio($dark-outline, $dark-surface-2, $ui-ratio);
+@debug ensure_contrast_ratio($dark-outline, $dark-surface-3, $ui-ratio);
 
 :root {
-    --color-primary: #{$color-light-primary};
-    --color-on-primary: #{$color-light-on-primary};
-    --color-primary-container: #{$color-light-primary-container};
-    --color-on-primary-container: #{$color-light-on-primary-container};
-    --color-surface-0: #{$color-light-surface-0};
-    --color-surface-1: #{$color-light-surface-1};
-    --color-surface-2: #{$color-light-surface-2};
-    --color-surface-3: #{$color-light-surface-3};
-    --color-on-surface: #{$color-light-on-surface};
-    --color-on-surface-less: #{$color-light-on-surface-less};
-    --color-outline: #{$color-light-outline};
-    --color-outline-less: #{$color-light-outline-less};
+    --color-primary: #{$light-primary};
+    --color-on-primary: #{$light-on-primary};
+    --color-primary-container: #{$light-primary-container};
+    --color-on-primary-container: #{$light-on-primary-container};
+    --color-surface-0: #{$light-surface-0};
+    --color-surface-1: #{$light-surface-1};
+    --color-surface-2: #{$light-surface-2};
+    --color-surface-3: #{$light-surface-3};
+    --color-on-surface: #{$light-on-surface};
+    --color-on-surface-less: #{$light-on-surface-less};
+    --color-outline: #{$light-outline};
+    --color-outline-less: #{$light-outline-less};
 }
 @media (prefers-color-scheme: dark) {
    :root {
-        --color-primary: #{$color-dark-primary};
-        --color-on-primary: #{$color-dark-on-primary};
-        --color-primary-container: #{$color-dark-primary-container};
-        --color-on-primary-container: #{$color-dark-on-primary-container};
-        --color-surface-0: #{$color-dark-surface-0};
-        --color-surface-1: #{$color-dark-surface-1};
-        --color-surface-2: #{$color-dark-surface-2};
-        --color-surface-3: #{$color-dark-surface-3};
-        --color-on-surface: #{$color-dark-on-surface};
-        --color-on-surface-less: #{$color-dark-on-surface-less};
-        --color-outline: #{$color-dark-outline};
-        --color-outline-less: #{$color-dark-outline-less};
+        --color-primary: #{$dark-primary};
+        --color-on-primary: #{$dark-on-primary};
+        --color-primary-container: #{$dark-primary-container};
+        --color-on-primary-container: #{$dark-on-primary-container};
+        --color-surface-0: #{$dark-surface-0};
+        --color-surface-1: #{$dark-surface-1};
+        --color-surface-2: #{$dark-surface-2};
+        --color-surface-3: #{$dark-surface-3};
+        --color-on-surface: #{$dark-on-surface};
+        --color-on-surface-less: #{$dark-on-surface-less};
+        --color-outline: #{$dark-outline};
+        --color-outline-less: #{$dark-outline-less};
    }
 }
 
-$color-primary: var(--color-primary);
-$color-on-primary: var(--color-on-primary);
-$color-primary-container: var(--color-primary-container);
-$color-on-primary-container: var(--color-on-primary-container);
-$color-surface-0: var(--color-surface-0);
-$color-surface-1: var(--color-surface-1);
-$color-surface-2: var(--color-surface-2);
-$color-surface-3: var(--color-surface-3);
-$color-on-surface: var(--color-on-surface);
-$color-on-surface-less: var(--color-on-surface-less);
-$color-outline: var(--color-outline);
-$color-outline-less: var(--color-outline-less);
+$primary: var(--color-primary);
+$on-primary: var(--color-on-primary);
+$primary-container: var(--color-primary-container);
+$on-primary-container: var(--color-on-primary-container);
+$surface-0: var(--color-surface-0);
+$surface-1: var(--color-surface-1);
+$surface-2: var(--color-surface-2);
+$surface-3: var(--color-surface-3);
+$on-surface: var(--color-on-surface);
+$on-surface-less: var(--color-on-surface-less);
+$outline: var(--color-outline);
+$outline-less: var(--color-outline-less);

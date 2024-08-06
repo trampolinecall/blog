@@ -1,4 +1,5 @@
 @use 'sass:math';
+
 $spacing-scale: math.div(4, 3);
 $spacing-small: 8px;
 $spacing-medium: calc(#{$spacing-small} * pow(#{$spacing-scale}, 1));
