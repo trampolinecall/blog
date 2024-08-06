@@ -55,16 +55,16 @@
 .markdowncontent :not(pre) > code {
     @include type.content-code-font;
     background: colors.$surface-1;
-    padding: 0 0.3em;
-    border-radius: 0.5em;
+    padding: 0 spacing.$spacing-tiny;
+    border-radius: spacing.$spacing-small;
     display: inline-block;
 }
 
 .markdowncontent pre {
     @include type.content-code;
     background: colors.$surface-1;
-    padding: spacing.$spacing-large;
-    border-radius: spacing.$spacing-large;
+    padding: spacing.$spacing-small spacing.$spacing-medium;
+    border-radius: spacing.$spacing-medium;
 }
 
 figure {
