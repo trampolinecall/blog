@@ -23,7 +23,7 @@ baseurl: "/blog"
 
 # Build settings
 theme:
-plugins:
+plugins: []
 
 permalink: /:year/:month/:day/:title:output_ext
 
@@ -42,7 +42,7 @@ exclude:
 #   - .jekyll-cache/
 #   - gemfiles/
 #   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
