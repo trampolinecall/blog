@@ -95,7 +95,7 @@ $monospace-font-family: "Roboto Mono", monospace;
         family: $normal-font-family;
         size: $base-normal-size;
         style: normal;
-        weight: normal;
+        weight: 400;
     }
 }
 @mixin content-code-font {
@@ -109,6 +109,6 @@ $monospace-font-family: "Roboto Mono", monospace;
         family: $monospace-font-family;
         size: $base-monospace-size;
         style: normal;
-        weight: normal;
+        weight: 400;
     }
 }
