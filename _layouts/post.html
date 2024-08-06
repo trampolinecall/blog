@@ -2,7 +2,12 @@
 layout: default
 ---
 
-<h1 class="title">{{ page.title }}</h1>
-<section class="postcontent">
-    {{ content }}
-</section>
+<div class="notfullwidth">
+    <div class="page-top">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="page-subtitle">{{ page.date | date: "%b %d, %Y" }}</p>
+    </div>
+    <section class="markdowncontent">
+        {{ content }}
+    </section>
+</div>

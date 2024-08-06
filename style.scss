@@ -1,0 +1,45 @@
+---
+---
+
+@use "type.scss";
+@use "spacing.scss";
+@use "colors.scss";
+@use "markdowncontent.scss";
+
+html {
+    background: colors.$surface-0;
+    color: colors.$on-surface;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.notfullwidth {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+    .notfullwidth {
+        max-width: none;
+    }
+}
+
+.page-top {
+    margin-top: spacing.$spacing-xlarge;
+    margin-bottom: spacing.$spacing-xlarge;
+}
+.page-title {
+    @include type.ui-big;
+    text-align: center;
+    margin: 0;
+    color: colors.$on-surface;
+}
+.page-subtitle {
+    @include type.ui-normal;
+    text-align: center;
+    margin-top: spacing.$spacing-small;
+    margin-bottom: 0;
+    color: colors.$on-surface-less;
+}

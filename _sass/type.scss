@@ -1,112 +1,113 @@
 @use 'sass:math';
 
-$type-scale: math.div(9, 8);
-$base-size: 12pt;
+$type-scale: math.div(4, 3);
+$base-ui-size: 10pt;
+$base-normal-size: 10pt;
+$base-monospace-size: 9pt;
 
-$normal-font-family: "Lato", sans-serif;
+$ui-font-family: "Montserrat", sans-serif;
+$normal-font-family: "Poppins", sans-serif;
 $monospace-font-family: "Roboto Mono", monospace;
 
 @mixin ui-big {
     font: {
-        family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 4));
+        family: $ui-font-family;
+        size: calc(#{$base-ui-size} * pow(#{$type-scale}, 4));
         style: normal;
-        weight: normal;
+        weight: 700;
     }
 }
 @mixin ui-medium {
     font: {
-        family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 2));
+        family: $ui-font-family;
+        size: calc(#{$base-ui-size} * pow(#{$type-scale}, 2));
         style: normal;
-        weight: normal;
+        weight: 600;
     }
 }
 @mixin ui-normal {
     font: {
-        family: $normal-font-family;
-        size: #{$base-size};
+        family: $ui-font-family;
+        size: #{$base-ui-size};
         style: normal;
-        weight: normal;
+        weight: 600;
     }
 }
 @mixin ui-tiny {
     font: {
-        family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, -1));
+        family: $ui-font-family;
+        size: calc(#{$base-ui-size} * pow(#{$type-scale}, -1));
         style: normal;
-        weight: normal;
+        weight: 700;
     }
 }
 
-@mixin content-title {
-    font: {
-        family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 6));
-        style: normal;
-        weight: bold;
-    }
-}
 @mixin content-h1 {
     font: {
         family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 5));
+        size: calc(#{$base-normal-size} * pow(#{$type-scale}, 5));
         style: normal;
-        weight: bold;
+        weight: 600;
     }
 }
 @mixin content-h2 {
     font: {
         family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 4));
+        size: calc(#{$base-normal-size} * pow(#{$type-scale}, 4));
         style: normal;
-        weight: bold;
+        weight: 600;
     }
 }
 @mixin content-h3 {
     font: {
         family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 3));
+        size: calc(#{$base-normal-size} * pow(#{$type-scale}, 3));
         style: normal;
-        weight: bold;
+        weight: 600;
     }
 }
 @mixin content-h4 {
     font: {
         family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 2));
+        size: calc(#{$base-normal-size} * pow(#{$type-scale}, 2));
         style: normal;
-        weight: bold;
+        weight: 600;
     }
 }
 @mixin content-h5 {
     font: {
         family: $normal-font-family;
-        size: calc(#{$base-size} * pow(#{$type-scale}, 1));
+        size: calc(#{$base-normal-size} * pow(#{$type-scale}, 1));
         style: normal;
-        weight: bold;
+        weight: 600;
     }
 }
 @mixin content-h6 {
     font: {
         family: $normal-font-family;
-        size: $base-size;
+        size: $base-normal-size;
         style: normal;
-        weight: bold;
+        weight: 600;
     }
 }
 @mixin content-body {
     font: {
         family: $normal-font-family;
-        size: $base-size;
+        size: $base-normal-size;
         style: normal;
         weight: normal;
+    }
+}
+@mixin content-code-font {
+    font: {
+        family: $monospace-font-family;
+        size: 0.9em;
     }
 }
 @mixin content-code {
     font: {
         family: $monospace-font-family;
-        size: $base-size * 0.75;
+        size: $base-monospace-size;
         style: normal;
         weight: normal;
     }

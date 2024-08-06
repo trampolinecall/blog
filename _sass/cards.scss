@@ -1,0 +1,45 @@
+@use "colors";
+@use "spacing";
+@use "type";
+
+.cardsholder {
+    // TODO: flexbox?
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: spacing.$spacing-medium;
+    align-item: start;
+}
+
+.card {
+    background: colors.$surface-1;
+    padding: spacing.$spacing-xlarge;
+    border-radius: spacing.$spacing-xlarge;
+    box-sizing: border-box;
+}
+
+.card-title {
+    @include type.ui-medium;
+    margin: 0;
+    padding: 0;
+    color: colors.$on-surface;
+}
+.card-title-link {
+    color: colors.$primary;
+    text-decoration: underline transparent;
+    transition: all 100ms;
+}
+.card-title-link:hover {
+    text-decoration-color: currentcolor;
+}
+
+.card-subtitle {
+    @include type.ui-tiny;
+    color: colors.$on-surface-less;
+    margin: spacing.$spacing-small 0 spacing.$spacing-medium 0;
+    padding: 0;
+}
+
+.card-content {
+    margin: 0;
+    padding: 0;
+}

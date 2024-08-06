@@ -2,17 +2,22 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="{{ "/assets/css/index-style.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/index-style.css" | relative_url }}">
+
+<div class="page-top">
+    <h1 class="page-title">Jason's Blog</h1>
+</div>
 
 {%- if site.posts.size > 0 -%}
-<h1 class="title">Posts</h1>
-<div class="post-list">
+<div class="cardsholder notfullwidth">
     {%- for post in site.posts -%}
-    <div class="post-list-item">
-        <p><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
-        <p class="post-date">{{ post.date | date: "%b %d, %Y" }}</p>
-        <div class="post-excerpt">{{- post.content -}}<div class="excerpt-blocker"></div></div>
-        <p><a class="post-read-more" href="{{ post.url | relative_url }}">Read more...</a></p>
+    <div class="card">
+        <p class="card-title"><a class="card-title-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
+        <p class="card-subtitle">{{ post.date | date: "%b %d, %Y" }}</p>
+        <div class="card-content">
+            <div class="post-excerpt preview markdowncontent">{{- post.content -}}</div>
+            <a class="preview-read-more" href="{{ post.url | relative_url }}">Read more</a>
+        </div>
     </div>
     {%- endfor -%}
 </div>

@@ -1,0 +1,29 @@
+@use "colors";
+@use "type";
+@use "spacing";
+
+.preview {
+    overflow: hidden;
+    position: relative;
+}
+.preview::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: min(50%, 100px);
+    background: linear-gradient(#0000, var(--fade-color));
+}
+
+.preview-read-more {
+    display: block;
+    margin-top: 10px;
+    text-decoration: underline transparent;
+    text-align: right;
+    color: colors.$primary;
+    @include type.ui-normal;
+    transition: all 100ms;
+}
+.preview-read-more:hover {
+    text-decoration-color: currentcolor;
+}

@@ -8,20 +8,10 @@
         {% else %}
             <title>{{ site.title }}</title>
         {% endif %}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
-        <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900&family=Poppins:wght@400..900&family=Roboto+Mono">
+        <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
     </head>
     <body>
-        <div id="topbarbox">
-            <div id="topbarthings" class="notfullwidth">
-                <div id="homelinkitem">
-                    <a href="{{ "/" | relative_url }}" id="homelink" class="navlink">{{ site.title }}</a>
-                </div>
-            </div>
-        </div>
-        <section class="content notfullwidth">
-            {{ content }}
-        </section>
+        {{ content }}
     </body>
 </html>
