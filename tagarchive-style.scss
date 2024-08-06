@@ -1,0 +1,11 @@
+---
+---
+
+@use "cards";
+@use "preview";
+@use "colors";
+
+.post-excerpt {
+    max-height: 200px;
+    --fade-color: #{colors.$surface-1};
+}

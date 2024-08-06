@@ -23,7 +23,15 @@ baseurl: "/blog"
 
 # Build settings
 theme:
-plugins: []
+plugins:
+    - jekyll-archives
+
+jekyll-archives:
+    enabled: [tags]
+    layouts:
+        tag: tagarchive
+    permalinks:
+        tag: '/tags/:name/'
 
 permalink: /:year/:month/:day/:title:output_ext
 

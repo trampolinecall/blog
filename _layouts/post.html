@@ -11,7 +11,7 @@ layout: default
             <p style="margin: 0; padding: 0">{{ page.date | date: "%b %d, %Y" }}</p>
             <div id="tag-chip-holder">
                 {%- for tag in page.tags -%}
-                <div class="chip tagchip"><p style="margin: 0; padding: 0">{{ tag }}</p></div>
+                <a style="display: block" class="chip tagchip" href={{ "/tags/" | append: tag | relative_url }}>{{ tag }}</a>
                 {%- endfor -%}
             </div>
         </div>

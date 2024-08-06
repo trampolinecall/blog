@@ -20,4 +20,14 @@
     @include type.ui-normal;
     background: colors.$surface-3;
     color: colors.$on-surface;
+    text-decoration: none;
+}
+.tagchip:hover {
+    background: color-mix(in srgb, colors.$surface-3 , colors.$on-surface 4%);
+}
+.tagchip:focus {
+    background: color-mix(in srgb, colors.$surface-3 , colors.$on-surface 8%);
+}
+.tagchip:active {
+    background: color-mix(in srgb, colors.$surface-3 , colors.$on-surface 12%);
 }

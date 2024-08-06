@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ "/tagarchive-style.css" | relative_url }}">
+
+<div class="page-top">
+    <h1 class="page-title">Posts tagged with '{{ page.title }}'</h1>
+</div>
+
+{{ content }}
+
+<div class="cardsholder notfullwidth">
+    {%- for post in page.posts -%}
+    <!-- TODO: make this into a snippet? -->
+    <div class="card">
+        <p class="card-title"><a class="card-title-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
+        <p class="card-subtitle">{{ post.date | date: "%b %d, %Y" }}</p>
+        <div class="card-content">
+            <div class="post-excerpt preview markdowncontent">{{- post.content -}}</div>
+            <a class="preview-read-more" href="{{ post.url | relative_url }}">Read more</a>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
