@@ -25,6 +25,17 @@ baseurl: "/blog"
 theme:
 plugins:
     - jekyll-archives
+    - jekyll-toc
+
+defaults:
+    - scope:
+          path: ""
+      values:
+          toc: true
+
+toc:
+    list_class: toc-list
+    sublist_class: toc-sublist
 
 jekyll-archives:
     enabled: [tags]

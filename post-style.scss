@@ -26,11 +26,53 @@
     text-decoration: none;
 }
 .tagchip:hover {
-    background: color-mix(in srgb, colors.$surface-3 , colors.$on-surface 4%);
+    background: color-mix(in srgb, colors.$surface-3, colors.$on-surface 4%);
 }
 .tagchip:focus {
-    background: color-mix(in srgb, colors.$surface-3 , colors.$on-surface 8%);
+    background: color-mix(in srgb, colors.$surface-3, colors.$on-surface 8%);
 }
 .tagchip:active {
-    background: color-mix(in srgb, colors.$surface-3 , colors.$on-surface 12%);
+    background: color-mix(in srgb, colors.$surface-3, colors.$on-surface 12%);
+}
+
+.toc-side-box {
+    margin-right: spacing.$spacing-small;
+}
+.toc-overflow-box {
+    width: min(300px, 25vw);
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: auto;
+}
+.toc-sticky-box {
+    position: sticky;
+    top: 0;
+}
+.toc-side-box :has(.toc-overflow-box:not(:has(ul))) {
+    display: none;
+}
+
+.toc-list, .toc-sublist {
+    @include type.ui-normal;
+    list-style-type: none;
+    line-height: 1.5em;
+}
+.toc-list {
+    padding-inline-start: 0;
+    padding: 0;
+    margin: 0;
+}
+.toc-sublist {
+    padding-inline-start: spacing.$spacing-large;
+}
+.toc-sublist {
+    padding-inline-start: spacing.$spacing-large;
+}
+.toc-entry a {
+    color: colors.$primary;
+    text-decoration: underline transparent;
+    transition: all 50ms;
+}
+.toc-entry a:hover {
+    text-decoration-color: currentcolor;
 }

@@ -16,7 +16,22 @@ layout: default
             </div>
         </div>
     </div>
-    <section class="markdowncontent">
-        {{ content }}
-    </section>
+    <div style="display: flex; flex-flow: row nowrap">
+        {%- capture post_toc -%}
+        {%- toc -%}
+        {%- endcapture -%}
+        {%- assign toc_item_count = post_toc | split: "toc-entry" | size | minus: 1 -%}
+        {%- if toc_item_count > 1 -%}
+        <div class="toc-side-box">
+            <div class="toc-sticky-box">
+                <div class="toc-overflow-box">
+                    {{ post_toc }}
+                </div>
+            </div>
+        </div>
+        {%- endif -%}
+        <section class="not-toc markdowncontent">
+            {{ content }}
+        </section>
+    </div>
 </div>
