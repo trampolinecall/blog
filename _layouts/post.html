@@ -2,10 +2,19 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="{{ "/post-style.css" | relative_url }}">
+
 <div class="notfullwidth">
     <div class="page-top">
         <h1 class="page-title">{{ page.title }}</h1>
-        <p class="page-subtitle">{{ page.date | date: "%b %d, %Y" }}</p>
+        <div class="page-subtitle">
+            <p style="margin: 0; padding: 0">{{ page.date | date: "%b %d, %Y" }}</p>
+            <div id="tag-chip-holder">
+                {%- for tag in page.tags -%}
+                <div class="chip tagchip"><p style="margin: 0; padding: 0">{{ tag }}</p></div>
+                {%- endfor -%}
+            </div>
+        </div>
     </div>
     <section class="markdowncontent">
         {{ content }}

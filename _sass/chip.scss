@@ -1,0 +1,6 @@
+@use 'spacing';
+
+.chip {
+    padding: spacing.$spacing-small spacing.$spacing-medium;
+    border-radius: 1000000rem;
+}

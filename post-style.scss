@@ -1,0 +1,23 @@
+---
+---
+
+@use 'colors';
+@use 'type';
+@use 'spacing';
+@use 'chip';
+
+#tag-chip-holder {
+    margin-top: spacing.$spacing-small;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: baseline;
+    gap: spacing.$spacing-small;
+}
+
+.tagchip {
+    @include type.ui-normal;
+    background: colors.$surface-3;
+    color: colors.$on-surface;
+}
