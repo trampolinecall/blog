@@ -1,22 +1,22 @@
 ---
 ---
 
-@import "type.scss";
-@import "spacing.scss";
-@import "colors.scss";
+@use "type.scss";
+@use "spacing.scss";
+@use "colors.scss";
 
 .navlink {
-    @include ui-medium;
+    @include type.ui-medium;
     text-decoration: none;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-medium;
-    color: $color-on-surface;
+    margin-top: spacing.$spacing-medium;
+    margin-bottom: spacing.$spacing-medium;
+    color: colors.$color-on-surface;
 }
 
 html {
-    background: $color-surface-0;
-    color: $color-on-surface;
-    @include content-body;
+    background: colors.$color-surface-0;
+    color: colors.$color-on-surface;
+    @include type.content-body;
     min-height: 100%;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 .content {
-    padding: 0 $spacing-large;
+    padding: 0 spacing.$spacing-large;
 }
 
 .notfullwidth {
@@ -41,7 +41,7 @@ body {
 }
 
 #topbarbox {
-    background: $color-surface-3;
+    background: colors.$color-surface-3;
     margin: 0;
     padding: 0;
     top: 0;
@@ -52,8 +52,8 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: baseline;
-    padding: $spacing-large;
-    padding-top: calc(#{$spacing-large} - 0.3em);
+    padding: spacing.$spacing-large;
+    padding-top: calc(#{spacing.$spacing-large} - 0.3em);
 }
 
 #homelinkitem {
@@ -61,71 +61,71 @@ body {
 }
 
 #homelink {
-    @include ui-big;
+    @include type.ui-big;
 }
 
 .postcontent .title {
-    @include content-title;
-    margin-top: $spacing-xlarge;
-    margin-bottom: $spacing-xlarge;
-    color: $color-on-surface;
+    @include type.content-title;
+    margin-top: spacing.$spacing-xlarge;
+    margin-bottom: spacing.$spacing-xlarge;
+    color: colors.$color-on-surface;
 }
 .postcontent h1 {
-    @include content-h1;
-    margin-top: $spacing-xlarge;
-    margin-bottom: $spacing-large;
-    color: $color-on-surface;
+    @include type.content-h1;
+    margin-top: spacing.$spacing-xlarge;
+    margin-bottom: spacing.$spacing-large;
+    color: colors.$color-on-surface;
 }
 .postcontent h2 {
-    @include content-h2;
-    margin-top: $spacing-large;
-    margin-bottom: $spacing-medium;
-    color: $color-on-surface;
+    @include type.content-h2;
+    margin-top: spacing.$spacing-large;
+    margin-bottom: spacing.$spacing-medium;
+    color: colors.$color-on-surface;
 }
 .postcontent h3 {
-    @include content-h3;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-medium;
-    color: $color-on-surface;
+    @include type.content-h3;
+    margin-top: spacing.$spacing-medium;
+    margin-bottom: spacing.$spacing-medium;
+    color: colors.$color-on-surface;
 }
 .postcontent h4 {
-    @include content-h4;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-small;
-    color: $color-on-surface;
+    @include type.content-h4;
+    margin-top: spacing.$spacing-medium;
+    margin-bottom: spacing.$spacing-small;
+    color: colors.$color-on-surface;
 }
 .postcontent h5 {
-    @include content-h5;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-small;
-    color: $color-on-surface;
+    @include type.content-h5;
+    margin-top: spacing.$spacing-medium;
+    margin-bottom: spacing.$spacing-small;
+    color: colors.$color-on-surface;
 }
 .postcontent h6 {
-    @include content-h6;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-small;
-    color: $color-on-surface;
+    @include type.content-h6;
+    margin-top: spacing.$spacing-medium;
+    margin-bottom: spacing.$spacing-small;
+    color: colors.$color-on-surface;
 }
 .postcontent p {
-    @include content-body;
-    margin-top: $spacing-small;
-    margin-bottom: $spacing-small;
-    color: $color-on-surface;
+    @include type.content-body;
+    margin-top: spacing.$spacing-small;
+    margin-bottom: spacing.$spacing-small;
+    color: colors.$color-on-surface;
 }
 
 .postcontent a {
-    @include content-body;
+    @include type.content-body;
     text-decoration: underline;
-    color: $color-primary;
+    color: colors.$color-primary;
 }
 
 .postcontent code {
-    @include content-code;
+    @include type.content-code;
 }
 
 .postcontent pre {
-    background: $color-surface-1;
-    padding: $spacing-large;
+    background: colors.$color-surface-1;
+    padding: spacing.$spacing-large;
     border-radius: 10px;
 }
 

@@ -1,4 +1,5 @@
-$spacing-scale: (4/3);
+@use 'sass:math';
+$spacing-scale: math.div(4, 3);
 $spacing-small: 8px;
 $spacing-medium: calc(#{$spacing-small} * pow(#{$spacing-scale}, 1));
 $spacing-large: calc(#{$spacing-small} * pow(#{$spacing-scale}, 2));

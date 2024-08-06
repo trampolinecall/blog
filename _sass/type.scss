@@ -1,4 +1,6 @@
-$type-scale: (9/8);
+@use 'sass:math';
+
+$type-scale: math.div(9, 8);
 $base-size: 12pt;
 
 $normal-font-family: "Lato", sans-serif;

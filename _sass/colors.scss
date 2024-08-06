@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $color-light-primary: #035825;
 $color-light-on-primary: #CCEFD4;
 $color-light-primary-container: #86E39C;
@@ -37,20 +39,17 @@ $surface-ratio: 1.03;
 
 @function srgb_to_linear($val) {
     @if $val < 0.3928 {
-        @return $val / 12.92;
+        @return math.div($val, 12.92);
     } @else {
-        $thingy: (($val + 0.055) / 1.055);
-        // $thingy needs to be raised to the power of 2.4, but that is not really possible with built-in sass
-        // so instead it is approximated just by squaring
-        // TODO: fix this when jekyll supports sass modules
-        @return $thingy * $thingy;
+        $thingy: math.div($val + 0.055, 1.055);
+        @return math.pow($thingy, 2.4);
     }
 }
 
 @function relative_luminance($color) {
-    $r: srgb_to_linear(red($color) / 255.0);
-    $g: srgb_to_linear(green($color) / 255.0);
-    $b: srgb_to_linear(blue($color) / 255.0);
+    $r: srgb_to_linear(math.div(red($color), 255.0));
+    $g: srgb_to_linear(math.div(green($color), 255.0));
+    $b: srgb_to_linear(math.div(blue($color), 255.0));
 
     @return 0.2126 * $r + 0.7152 * $g + 0.0722 * $b;
 }
@@ -59,7 +58,7 @@ $surface-ratio: 1.03;
     $c1-luminance: relative_luminance($c1);
     $c2-luminance: relative_luminance($c2);
 
-    @return (max($c1-luminance, $c2-luminance) + 0.05) / (min($c1-luminance, $c2-luminance) + 0.05);
+    @return math.div(max($c1-luminance, $c2-luminance) + 0.05, min($c1-luminance, $c2-luminance) + 0.05);
 }
 
 @function ensure_contrast_ratio($c1, $c2, $needed-ratio) {

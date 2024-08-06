@@ -1,9 +1,9 @@
 ---
 ---
 
-@import "type.scss";
-@import "spacing.scss";
-@import "colors.scss";
+@use "type";
+@use "spacing";
+@use "colors";
 
 .post-list {
     display: grid;
@@ -14,9 +14,9 @@
 }
 
 .post-list-item {
-    background: $color-surface-1;
-    padding: $spacing-xlarge;
-    border-radius: $spacing-xlarge;
+    background: colors.$color-surface-1;
+    padding: spacing.$spacing-xlarge;
+    border-radius: spacing.$spacing-xlarge;
     box-sizing: border-box;
 }
 .post-date {
@@ -33,9 +33,9 @@
     bottom: 0;
     width: 100%;
     height: 50px;
-    background: linear-gradient(#0000, $color-surface-1);
+    background: linear-gradient(#0000, colors.$color-surface-1);
 }
 body .post-link {
-    @include ui-medium;
+    @include type.ui-medium;
     text-decoration: none;
 }
