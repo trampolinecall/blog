@@ -15,6 +15,9 @@
     align-content: baseline;
     gap: spacing.$spacing-small;
 }
+#tag-chip-holder:empty {
+    margin-top: 0;
+}
 
 .tagchip {
     @include type.ui-normal;
