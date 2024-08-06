@@ -5,6 +5,7 @@
 @use "spacing.scss";
 @use "colors.scss";
 @use "markdowncontent.scss";
+@use "syntax-highlighting-default.css";
 
 html {
     background: colors.$surface-0;
