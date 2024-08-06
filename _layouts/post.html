@@ -5,33 +5,53 @@ layout: default
 <link rel="stylesheet" href="{{ "/post-style.css" | relative_url }}">
 
 <div class="notfullwidth">
-    <div class="page-top">
-        <h1 class="page-title">{{ page.title }}</h1>
-        <div class="page-subtitle">
-            <p style="margin: 0; padding: 0">{{ page.date | date: "%b %d, %Y" }}</p>
-            <div id="tag-chip-holder">
-                {%- for tag in page.tags -%}
-                <a style="display: block" class="chip tagchip" href={{ "/tags/" | append: tag | relative_url }}>{{ tag }}</a>
-                {%- endfor -%}
-            </div>
-        </div>
-    </div>
-    <div style="display: flex; flex-flow: row nowrap">
-        {%- capture post_toc -%}
-        {%- toc -%}
-        {%- endcapture -%}
-        {%- assign toc_item_count = post_toc | split: "toc-entry" | size | minus: 1 -%}
-        {%- if toc_item_count > 1 -%}
-        <div class="toc-side-box">
-            <div class="toc-sticky-box">
-                <div class="toc-overflow-box">
-                    {{ post_toc }}
+    {%- capture post_toc -%}
+    {%- toc -%}
+    {%- endcapture -%}
+    {%- assign toc_item_count = post_toc | split: "toc-entry" | size | minus: 1 -%}
+    {%- if toc_item_count > 1 -%}
+        <div style="display: flex; flex-flow: row nowrap">
+            <div class="toc-side-box">
+                <div class="toc-sticky-box">
+                    <div class="toc-overflow-box">
+                        <p><a href="{{ "/" | relative_url }}" class="homelink">Jason's Blog</a></p>
+                        <p class="toc-header">Table of contents</p>
+                        {{- post_toc -}}
+                    </div>
                 </div>
             </div>
+            <div class="not-toc">
+                <div class="page-top">
+                    <h1 class="page-title">{{ page.title }}</h1>
+                    <div class="page-subtitle">
+                        <p style="margin: 0; padding: 0">{{ page.date | date: "%b %d, %Y" }}</p>
+                        <div id="tag-chip-holder">
+                            {%- for tag in page.tags -%}
+                            <a style="display: block" class="chip tagchip" href={{ "/tags/" | append: tag | relative_url }}>{{ tag }}</a>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+                <section class="markdowncontent">
+                    {{ content }}
+                </section>
+            </div>
         </div>
-        {%- endif -%}
-        <section class="not-toc markdowncontent">
-            {{ content }}
-        </section>
-    </div>
+    {%- else -%}
+        <p style="width: 100%"><a href="{{ "/" | relative_url }}" class="homelink">Jason's Blog</a></p>
+        <div class="page-top">
+            <h1 class="page-title">{{ page.title }}</h1>
+            <div class="page-subtitle">
+                <p style="margin: 0; padding: 0">{{ page.date | date: "%b %d, %Y" }}</p>
+                <div id="tag-chip-holder">
+                    {%- for tag in page.tags -%}
+                    <a style="display: block" class="chip tagchip" href={{ "/tags/" | append: tag | relative_url }}>{{ tag }}</a>
+                    {%- endfor -%}
+                </div>
+            </div>
+            <section class="markdowncontent">
+                {{ content }}
+            </section>
+        </div>
+    {%- endif -%}
 </div>

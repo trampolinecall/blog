@@ -48,8 +48,21 @@
     position: sticky;
     top: 0;
 }
-.toc-side-box :has(.toc-overflow-box:not(:has(ul))) {
-    display: none;
+
+.homelink {
+    text-decoration: underline transparent;
+    color: colors.$primary;
+    @include type.ui-medium;
+    transition: all 100ms;
+}
+.homelink:hover {
+    text-decoration-color: currentcolor;
+}
+.toc-header {
+    @include type.ui-normal;
+    margin: 0;
+    margin-top: spacing.$spacing-large;
+    margin-bottom: spacing.$spacing-small;
 }
 
 .toc-list, .toc-sublist {
@@ -69,7 +82,7 @@
     padding-inline-start: spacing.$spacing-large;
 }
 .toc-entry a {
-    color: colors.$primary;
+    color: colors.$on-surface-less;
     text-decoration: underline transparent;
     transition: all 50ms;
 }
