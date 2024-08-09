@@ -17,6 +17,7 @@ gem "jekyll", "~> 4.3.3"
 group :jekyll_plugins do
     gem 'jekyll-archives'
     gem 'jekyll-toc'
+    gem 'jekyll-diagrams'
 end
 
 gem "html-proofer"

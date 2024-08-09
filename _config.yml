@@ -26,6 +26,7 @@ theme:
 plugins:
     - jekyll-archives
     - jekyll-toc
+    - jekyll-diagrams
 
 defaults:
     - scope:
@@ -43,6 +44,11 @@ jekyll-archives:
         tag: tagarchive
     permalinks:
         tag: '/tags/:name/'
+
+jekyll-diagrams:
+    graphviz:
+        node_attributes:
+          fontsize: 9pt
 
 permalink: /:year/:month/:day/:title:output_ext
 
