@@ -1,9 +1,9 @@
 @use 'sass:math';
 
 $type-scale: math.div(4, 3);
-$base-ui-size: 10pt;
-$base-normal-size: 10pt;
-$base-monospace-size: 9pt;
+$base-ui-size: 0.85rem;
+$base-normal-size: 0.85rem;
+$base-monospace-size: 0.8rem;
 
 $ui-font-family: "Montserrat", sans-serif;
 $normal-font-family: "Poppins", sans-serif;

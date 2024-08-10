@@ -66,6 +66,7 @@
     padding: spacing.$spacing-small spacing.$spacing-medium;
     border-radius: spacing.$spacing-medium;
     box-sizing: border-box;
+    overflow-x: auto;
 }
 
 .markdowncontent .table-wrapper {
