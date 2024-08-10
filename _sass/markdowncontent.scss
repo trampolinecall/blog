@@ -65,6 +65,71 @@
     background: colors.$surface-1;
     padding: spacing.$spacing-small spacing.$spacing-medium;
     border-radius: spacing.$spacing-medium;
+    box-sizing: border-box;
+}
+
+.markdowncontent .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    border-radius: spacing.$spacing-small;
+}
+.markdowncontent table {
+    background: colors.$surface-1;
+
+    padding: 0;
+
+    table-layout: fixed;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border-radius: spacing.$spacing-small;
+    overflow: hidden;
+}
+.markdowncontent svg {
+  border-radius: spacing.$spacing-small;
+}
+.markdowncontent th {
+    @include type.content-body;
+    font-weight: 700;
+    padding: spacing.$spacing-tiny spacing.$spacing-small;
+    background: colors.$surface-2;
+}
+.markdowncontent td {
+    @include type.content-body;
+    padding: spacing.$spacing-tiny spacing.$spacing-small;
+}
+// the next 2 things are copied from https://unused-css.com/blog/css-rounded-table-corners/
+// Apply a border to the right of all but the last column
+.markdowncontent table th:not(:last-child),
+.markdowncontent table td:not(:last-child) {
+ border-right: 1px solid colors.$outline-less;
+}
+// Apply a border to the bottom of all but the last row
+.markdowncontent table>thead>tr:not(:last-child)>th,
+.markdowncontent table>thead>tr:not(:last-child)>td,
+.markdowncontent table>tbody>tr:not(:last-child)>th,
+.markdowncontent table>tbody>tr:not(:last-child)>td,
+.markdowncontent table>tfoot>tr:not(:last-child)>th,
+.markdowncontent table>tfoot>tr:not(:last-child)>td,
+.markdowncontent table>tr:not(:last-child)>td,
+.markdowncontent table>tr:not(:last-child)>th,
+.markdowncontent table>thead:not(:last-child),
+.markdowncontent table>tbody:not(:last-child),
+.markdowncontent table>tfoot:not(:last-child) {
+ border-bottom: 1px solid colors.$outline-less;
+}
+
+.markdowncontent li {
+    @include type.content-body;
+    line-height: 1.5em;
+}
+ul {
+  padding-left: spacing.$spacing-large;
+}
+ol {
+  padding-left: spacing.$spacing-large;
 }
 
 figure {
