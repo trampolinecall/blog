@@ -11,7 +11,7 @@
 }
 
 .card {
-    background: colors.$surface-1;
+    background: var(--color-surface-1);
     padding: spacing.$spacing-xlarge;
     border-radius: spacing.$spacing-xlarge;
     box-sizing: border-box;
@@ -21,10 +21,10 @@
     @include type.ui-medium;
     margin: 0;
     padding: 0;
-    color: colors.$on-surface;
+    color: var(--color-on-surface);
 }
 .card-title-link {
-    color: colors.$primary;
+    color: var(--color-primary);
     text-decoration: underline transparent;
     transition: all 100ms;
 }
@@ -34,7 +34,7 @@
 
 .card-subtitle {
     @include type.ui-tiny;
-    color: colors.$on-surface-less;
+    color: var(--color-on-surface-less);
     margin: spacing.$spacing-small 0 spacing.$spacing-medium 0;
     padding: 0;
 }

@@ -21,18 +21,18 @@
 
 .tagchip {
     @include type.ui-normal;
-    background: colors.$surface-3;
-    color: colors.$on-surface;
+    background: var(--color-surface-3);
+    color: var(--color-on-surface);
     text-decoration: none;
 }
 .tagchip:hover {
-    background: color-mix(in srgb, colors.$surface-3, colors.$on-surface 4%);
+    background: color-mix(in srgb, var(--color-surface-3), var(--color-on-surface) 4%);
 }
 .tagchip:focus {
-    background: color-mix(in srgb, colors.$surface-3, colors.$on-surface 8%);
+    background: color-mix(in srgb, var(--color-surface-3), var(--color-on-surface) 8%);
 }
 .tagchip:active {
-    background: color-mix(in srgb, colors.$surface-3, colors.$on-surface 12%);
+    background: color-mix(in srgb, var(--color-surface-3), var(--color-on-surface) 12%);
 }
 
 .toc-side-box {
@@ -51,7 +51,7 @@
 
 .homelink {
     text-decoration: underline transparent;
-    color: colors.$primary;
+    color: var(--color-primary);
     @include type.ui-medium;
     transition: all 100ms;
 }
@@ -82,7 +82,7 @@
     padding-inline-start: spacing.$spacing-large;
 }
 .toc-entry a {
-    color: colors.$primary;
+    color: var(--color-primary);
     text-decoration: underline transparent;
     transition: all 50ms;
 }

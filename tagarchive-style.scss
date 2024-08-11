@@ -7,5 +7,5 @@
 
 .post-excerpt {
     max-height: 200px;
-    --fade-color: #{colors.$surface-1};
+    --fade-color: var(--color-surface-1);
 }

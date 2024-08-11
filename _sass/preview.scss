@@ -20,7 +20,7 @@
     margin-top: 10px;
     text-decoration: underline transparent;
     text-align: right;
-    color: colors.$primary;
+    color: var(--color-primary);
     @include type.ui-normal;
     transition: all 100ms;
 }
