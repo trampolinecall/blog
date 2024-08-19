@@ -67,19 +67,20 @@
 
 .toc-list, .toc-sublist {
     @include type.ui-normal;
-    list-style-type: none;
+    list-style-type: disc;
     line-height: 1.5em;
 }
 .toc-list {
-    padding-inline-start: 0;
-    padding: 0;
     margin: 0;
 }
 .toc-sublist {
-    padding-inline-start: spacing.$spacing-large;
+    padding-inline-start: spacing.$spacing-medium;
 }
 .toc-sublist {
-    padding-inline-start: spacing.$spacing-large;
+    padding-inline-start: spacing.$spacing-medium;
+}
+.toc-entry {
+    color: var(--color-on-surface);
 }
 .toc-entry a {
     color: var(--color-primary);
